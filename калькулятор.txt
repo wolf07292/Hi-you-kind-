@@ -1,0 +1,17 @@
+a=int(input())
+b=input()
+c=int(input())
+if (b == '*'):
+    z=a*c
+    print(z)
+elif (b == '+'):
+    z=a+c
+    print(z)
+elif (b == '-'):
+    z=a-c
+    print(z)
+elif (b == '/'):
+    z=a/c
+    print(z)
+else:
+    print('Бесконечность')
