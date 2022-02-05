@@ -1,0 +1,21 @@
+import tkinter as tk
+
+def dk(event):
+    if event.keysym == 'Up':
+        c.move(oval, 0, -20)
+    elif event.keysym == 'Down':
+        c.move(oval, 0, 20)
+    elif event.keysym == 'Left':
+        c.move(oval, -20, 0)
+    elif event.keysym == 'Right':
+        c.move(oval, 20, 0)
+
+
+win = tk.Tk()
+l = tk.Label(win, text='oleg')
+l.pack()
+c = tk.Canvas(win, bg='#0000ff', width=3000, height=3000)
+oval = c.create_oval((300, 300),(400,400),fill='yellow' )
+c.pack()
+win.bind('<KeyPress>', dk)
+win.mainloop()
