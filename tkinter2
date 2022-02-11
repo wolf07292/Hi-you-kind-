@@ -1,0 +1,48 @@
+import tkinter as tk
+
+def dk(event):
+    if event.keysym == 'Up':
+        c.move(line1, 0, -20)
+    elif event.keysym == 'Down':
+        c.move(line1, 0, 20)
+    elif event.keysym == 'Left':
+        c.move(line1, -20, 0)
+    elif event.keysym == 'Right':
+        c.move(line1, 20, 0)
+    if event.keysym == 'Up':
+        c.move(line2, 0, -20)
+    elif event.keysym == 'Down':
+        c.move(line2, 0, 20)
+    elif event.keysym == 'Left':
+        c.move(line2, -20, 0)
+    elif event.keysym == 'Right':
+        c.move(line2, 20, 0)
+    if event.keysym == 'Up':
+        c.move(line3, 0, -20)
+    elif event.keysym == 'Down':
+        c.move(line3, 0, 20)
+    elif event.keysym == 'Left':
+        c.move(line3, -20, 0)
+    elif event.keysym == 'Right':
+        c.move(line3, 20, 0)
+    if event.keysym == 'Up':
+        c.move(line4, 0, -20)
+    elif event.keysym == 'Down':
+        c.move(line4, 0, 20)
+    elif event.keysym == 'Left':
+        c.move(line4, -20, 0)
+    elif event.keysym == 'Right':
+        c.move(line4, 20, 0)
+
+
+win = tk.Tk()
+l = tk.Label(win, text='oleg')
+l.pack()
+c = tk.Canvas(win, bg='#0000ff', width=3000, height=3000)
+line1 = c.create_line((300, 300),(200,400),fill='yellow' )
+line2 = c.create_line((300, 300),(400,400),fill='yellow' )
+line3 = c.create_line((300, 300),(300,100),fill='yellow' )
+line4 = c.create_line((500, 100),(100,100),fill='yellow' )
+c.pack()
+win.bind('<KeyPress>', dk)
+win.mainloop()
